@@ -29,7 +29,7 @@ pipeline {
         }
         stage('deploy'){
             steps{
-            deploy adapters: [tomcat9(credentialsId: 'tocatpassword', path: '', url: 'http://184.72.29.240:8081/')], contextPath: 'addressbookp', war: '**/*.war'
+            deploy adapters: [tomcat9(credentialsId: 'tocatpassword', path: '', url: 'http://184.72.29.240:8081/')], contextPath: 'addressbookpn', war: '**/*.war'
             }
         }
     }
