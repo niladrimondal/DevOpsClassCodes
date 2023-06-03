@@ -1,12 +1,16 @@
 
 pipeline{
+	tools{
+        jdk 'jenkins_vm_java'
+        maven 'my_maven'
+    }
 	agent any
       stages{
            stage('Checkout'){
 	    
                steps{
 		 echo 'cloning..'
-                 git 'https://github.com/akshu20791/DevOpsClassCodes.git'
+                 git 'https://github.com/niladrimondal/DevOpsClassCodes.git'
               }
           }
           stage('Compile'){
